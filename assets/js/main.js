@@ -52,7 +52,7 @@ const clearErrors = () => {
     });
 };
 
-// Función calculateAge mejorada
+// Modificar la función calculateAge
 const calculateAge = (birthday) => {
     try {
         const today = new Date();
@@ -135,6 +135,19 @@ monthInput.addEventListener('input', (e) => {
 
 yearInput.addEventListener('input', (e) => {
     e.target.value = sanitizeInput(e.target.value);
+});
+
+// Event listener modificado para el botón
+calculateBtn.addEventListener('click', () => {
+    clearErrors();
+
+    // Sanitizar y convertir valores
+    const day = parseInt(sanitizeInput(dayInput.value)) || 0;
+    const month = parseInt(sanitizeInput(monthInput.value)) || 0;
+    const year = parseInt(sanitizeInput(yearInput.value)) || 0;
+
+    let hasError = false;
+
 });
 
 // Modificar el event listener del botón
