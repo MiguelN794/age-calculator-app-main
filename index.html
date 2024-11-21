@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+    rel="stylesheet">
+  <title>Age calculator app</title>
+</head>
+
+<body>
+  <div class="card">
+    <form id="age-form">
+      <div class="input-group">
+        <label for="day">Day</label>
+        <input type="text" id="day" name="day" placeholder="DD" inputmode="numeric" pattern="[0-9]*" maxlength="2">
+      </div>
+      <div class="input-group">
+        <label for="month">Month</label>
+        <input type="text" id="month" name="month" placeholder="MM" inputmode="numeric" pattern="[0-9]*" maxlength="2">
+      </div>
+      <div class="input-group">
+        <label for="year">Year</label>
+        <input type="text" id="year" name="year" placeholder="YYYY" inputmode="numeric" pattern="[0-9]*" maxlength="4">
+      </div>
+      <button type="button" id="calculate-btn" aria-label="Calculate age"></button>
+    </form>
+    <div class="result">
+      <p><span id="years">--</span> years</p>
+      <p><span id="months">--</span> months</p>
+      <p><span id="days">--</span> days</p>
+    </div>
+  </div>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+
+</html>
